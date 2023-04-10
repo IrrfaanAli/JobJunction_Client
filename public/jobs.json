@@ -1,0 +1,40 @@
+[
+    {
+        "id": "1",
+        "title": "Software Developer",
+        "description": "We are looking for an experienced software developer to join our team. The successful candidate will have a proven track record in developing software applications, and will be responsible for designing, coding, and debugging complex applications.",
+        "salary": "$80,000 - $100,000",
+        "location": "San Francisco, CA",
+        "company": "Acme Software",
+        "job_type":["Full-time","On Site"] ,
+        "education_requirement": "Bachelor's degree in Computer Science or related field",
+        "job_responsibility": "Design, code, and debug complex software applications",
+        "phone": "555-1234",
+        "email": "jobs@acmesoftware.com"
+     },
+     {
+        "id": "2",
+        "title": "Front-End Developer",
+        "description": "We are seeking a talented front-end developer to help us build beautiful and responsive web applications. The ideal candidate will have experience with modern web development tools and frameworks.",
+        "salary": "$70,000 - $90,000",
+        "location": "New York, NY",
+        "company": "ABC Web Design",
+        "job_type":["Full-time","Remote"] ,
+        "education_requirement": "Bachelor's degree in Computer Science or related field",
+        "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
+        "phone": "555-5678",
+        "email": "jobs@abcwebdesign.com"
+     },
+    {
+        "id": "3",
+        "logo": "Gara Mohamed",
+        "title": "12 Great Ideas for Programming Projects That People Will Use",
+        "jobs": "44"
+    },
+    {
+        "id": "4",
+        "logo": "Gara Mohamed",
+        "title": "12 Great Ideas for Programming Projects That People Will Use",
+        "jobs": "33"
+    }
+]
