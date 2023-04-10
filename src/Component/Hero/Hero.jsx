@@ -1,28 +1,23 @@
 import React from 'react';
+import './Hero.css'
 
 const Hero = () => {
-    return (
-        <div>
-         <div >
-        <div >
-          <h2 >Hi, i am</h2>
-          <h1 >Mary Hardy</h1>
-          <p >
-            Shot what able cold new see hold.Friendly as an betrayed formerly
-            <br />
-            he. Morning because as to society behaved moments.
-          </p>
-          <div >
-            <button >Download CV</button>
-            <button > Contact</button>
-          </div>
-        </div>
-        <div >
-          <img src="./images/hardy.png" alt="" />
-        </div>
+  return (
+    <div className='flex gap-96 '>
+      <div>
+        <p className='text-5xl font-bold'>One Step</p> <br></br>
+        <p className='text-5xl font-bold'>Closer To Your</p> <br></br>
+        <p className='text-5xl font-bold' id='job'>Dream Job</p>
+
+        <p className='w-36 mt-7'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
+         <button id='header-button' > Get Started</button>
       </div>
-        </div>
-    );
+      <div >
+         <img className='w-full h-full' src="headerphoto.png" alt=" " />
+      </div>
+
+    </div>
+  );
 };
 
 export default Hero;
