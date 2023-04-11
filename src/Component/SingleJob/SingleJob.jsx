@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 const SingleJob = (props) => {
 
-    const {id,title,company,location,salary,job_type} = props.job;
+    const {id,title,company,location,salary,job_type,logo} = props.job;
     return (
-        <div className='border-solid border-2 border-indigo-600 w-96 p-7 ' >
-           
+        <div className='border-solid border-2 border-indigo-600 w-96 p-12 ' >
+            
+            <img className='mb-3' src={logo} alt="" />
              <p className='font-bold mb-1'>{title}</p>
               <p>{company}</p> 
                <div className='flex mt-2'>
@@ -19,7 +20,7 @@ const SingleJob = (props) => {
                 <div>{location}</div>
                 <div className='ml-5  '>{salary}</div>
               </div>
-             <Link to={`feature/${id}`} id='header-button' className='p-2'>View details</Link>
+             <Link to={`feature/${id}`} id='header-button' className='p-2 ml'>View details</Link>
               
         </div>
     );

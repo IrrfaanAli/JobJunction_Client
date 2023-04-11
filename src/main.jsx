@@ -9,13 +9,9 @@ import {
 import App from './App'
 import './index.css'
 import Blogs from './Component/Blogs/Blogs';
-import Header from './Component/Header/Header';
-import Hero from './Component/Hero/Hero';
 import AppliedJobs from './Component/AppliedJobs/AppliedJobs';
-import BlogsPageRoute from './Component/HomeRoute/HomeRoute';
 import JobDetails from './Component/JobDetails/JobDetails';
 import HomeRouter from './Component/HomeRoute/HomeRoute';
-import Statistics from './Component/Statistics/Statistics';
 import Chart from './Component/Chart/Chart';
 
 
