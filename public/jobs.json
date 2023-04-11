@@ -10,7 +10,8 @@
         "education_requirement": "Bachelor's degree in Computer Science or related field",
         "job_responsibility": "Design, code, and debug complex software applications",
         "phone": "555-1234",
-        "email": "jobs@acmesoftware.com"
+        "email": "jobs@acmesoftware.com",
+        "experiences": "2-3"
      },
      {
         "id": "2",
@@ -23,7 +24,8 @@
         "education_requirement": "Bachelor's degree in Computer Science or related field",
         "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
         "phone": "555-5678",
-        "email": "jobs@abcwebdesign.com"
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3"
      },
     {
         "id": "3",
@@ -36,7 +38,8 @@
         "education_requirement": "Bachelor's degree in Computer Science or related field",
         "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
         "phone": "555-5678",
-        "email": "jobs@abcwebdesign.com"
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3"
     },
     {
         "id": "4",
@@ -49,6 +52,7 @@
         "education_requirement": "Bachelor's degree in Computer Science or related field",
         "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
         "phone": "555-5678",
-        "email": "jobs@abcwebdesign.com"
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3"
     }
 ]
