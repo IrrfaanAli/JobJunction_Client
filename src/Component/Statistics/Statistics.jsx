@@ -8,4 +8,4 @@ const Statistics = () => {
     );
 };
 
-export default Statistics;<p>Statistics</p>
+export default Statistics;

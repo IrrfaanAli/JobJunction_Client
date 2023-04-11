@@ -14,10 +14,10 @@ const JobList = () => {
 
     return (
         <div>
-             <p>Featured Jobs</p>
-             <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+             <p className='text-center font-bold mb-3'>Featured Jobs</p>
+             <p className='text-center mb-7'>Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-              <div>
+              <div className='grid grid-cols-2 gap-6'>
                   {
                     jobList.map(job => <SingleJob
                      
