@@ -13,6 +13,7 @@ import AppliedJobs from './Component/AppliedJobs/AppliedJobs';
 import JobDetails from './Component/JobDetails/JobDetails';
 import HomeRouter from './Component/HomeRoute/HomeRoute';
 import Chart from './Component/Chart/Chart';
+import ErrorPage from './Component/ErrorPage/ErrorPage';
 
 
 
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<App></App>,
-    errorElement: <p>nai egula</p>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path:"/",
