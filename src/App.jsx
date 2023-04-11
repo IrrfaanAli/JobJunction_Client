@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <div className="App mx-32">
+    <div className="App lg:mx-32">
        <Header></Header>
         
        <Outlet></Outlet>

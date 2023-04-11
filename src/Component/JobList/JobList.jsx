@@ -4,31 +4,51 @@ import './JobList.css'
 
 const JobList = () => {
 
-    const [jobList,setjobList] = useState([]);
+    const [jobList, setjobList] = useState([]);
+    const [full, setfull ] = useState([]);
 
-    useEffect(()=>{
-       
-        fetch('jobs.json').then( res  => res.json()).then(data => setjobList(data));
+    useEffect(() => {
 
-    },[])
+        fetch('jobs.json')
+            .then(res => res.json())
+            .then(data => {
+                const data1 = data.slice(0, 2)
+                setjobList(data1)
+            });
 
+
+    }, []);
+
+     const allJobs = () =>{
+        
+
+        useEffect(() => {
+
+            fetch('jobs.json')
+                .then(res => res.json())
+                .then(data => setjobList(data)
+                );
+        }, []); 
+         
+     }
+     
     return (
         <div >
-             <p className='text-center font-bold mb-3 text-4xl'>Featured Jobs</p>
-             <p className='text-center mb-7'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <p className='text-center font-bold mb-3 text-4xl'>Featured Jobs</p>
+            <p className='text-center mb-7'>Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-              <div className='grid grid-cols-2 gap-7 ml-96' id='page'>
-                  {
+            <div className='grid grid-cols-1  ml-7 lg:grid-cols-2 gap-7 lg:ml-96' id='page'>
+                {
                     jobList.map(job => <SingleJob
-                     
-                         key={job.id}
-                         job ={job}
-                     
+
+                        key={job.id}
+                        job={job}
+
                     ></SingleJob>)
-                  }
-              </div>
-            
-               <button id='header-button'  className='seebutton p-3'>See all jobs</button>
+                }
+            </div>
+
+            <button id='header-button' className='seebutton p-3' onClick={allJobs()}>See all jobs</button>
         </div>
     );
 };

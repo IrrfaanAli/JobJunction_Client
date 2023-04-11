@@ -5,7 +5,7 @@ const SingleJob = (props) => {
 
     const {id,title,company,location,salary,job_type,logo} = props.job;
     return (
-        <div className='border-solid border-2 border-indigo-600 w-96 p-12 ' >
+        <div className='border-solid border-2 border-indigo-600 w-48  ml-12 lg:w-96 p-1 lg:p-12 ' >
             
             <img className='mb-3' src={logo} alt="" />
              <p className='font-bold mb-1'>{title}</p>

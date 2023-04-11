@@ -14,9 +14,9 @@ const Category = () => {
     return (
         <div>
              <p className='text-center text-3xl font-bold mt-7 mb-5'>Job Category List</p>
-             <p className='text-center mb-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+             <p className='text-center mb-5  '>Explore thousands of job opportunities with all the information you need. Its your future</p>
              
-             <div className='flex gap-12 justify-center mb-14'>
+             <div className='flex flex-col w-72   gap-4 lg:flex-row lg:gap-12  lg:ml-96 mb-14'>
                  {
                     jobs.map(job=> <SingleCategory
                      key = {job.id}
