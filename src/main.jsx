@@ -16,6 +16,7 @@ import BlogsPageRoute from './Component/HomeRoute/HomeRoute';
 import JobDetails from './Component/JobDetails/JobDetails';
 import HomeRouter from './Component/HomeRoute/HomeRoute';
 import Statistics from './Component/Statistics/Statistics';
+import Chart from './Component/Chart/Chart';
 
 
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<App></App>,
+    errorElement: <p>nai egula</p>,
     children: [
       {
         path:"/",
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:"statistics",
-        element: <Statistics></Statistics>,
+        element: <Chart></Chart>,
         
       },
       {
@@ -50,7 +52,8 @@ const router = createBrowserRouter([
         
       }
     ], 
-  }
+  },
+  
   
 ]);
 

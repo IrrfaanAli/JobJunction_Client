@@ -13,11 +13,11 @@ const JobList = () => {
     },[])
 
     return (
-        <div>
+        <div >
              <p className='text-center font-bold mb-3'>Featured Jobs</p>
              <p className='text-center mb-7'>Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-              <div className='grid grid-cols-2 gap-6'>
+              <div className='grid grid-cols-2 gap-2 justify-items-center '>
                   {
                     jobList.map(job => <SingleJob
                      
