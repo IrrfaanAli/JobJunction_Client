@@ -29,7 +29,7 @@ const JobList = () => {
                         key={job.id}
                         job={job}
 
-                    ></SingleJob>) :  jobList.slice(0,2).map(job => <SingleJob
+                    ></SingleJob>) :  jobList.slice(0,4).map(job => <SingleJob
 
                         key={job.id}
                         job={job}
