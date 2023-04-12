@@ -1,18 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import './JobDetails.css'
+import { addToDb } from '../../../public/fakedb';
 
 const JobDetails = () => {
      const jobs = useLoaderData();
       const {id} = useParams();
 
-      const [jobdetails,setjobdetails] = useState({});
+      const [jobdetails,setjobdetails] = useState([]);
+      const [cart,setCart] = useState([]);
 
        useEffect(()=>{
          const jobData = jobs.find(jobid => jobid.id == id);
         // console.log(jobData)
          setjobdetails(jobData);
        },[])
+
+
+       const handleAddToCart =(jobdetails)=>{
+        let newCart = [];
+          console.log(jobdetails)
+        const exists = cart.find(pd =>pd.id === jobdetails.id);
+
+        if (!exists){
+          jobdetails.quantity = 1;
+            newCart =[...cart,jobdetails]
+        }
+        else{
+            exists.quantity = exists.quantity + 1 ;
+            const remaining = cart.filter(pd => pd.id !== jobdetails.id);
+            newCart =[...remaining ,exists]
+        }
+        
+        setCart(newCart);
+        addToDb(jobdetails.id);
+     }
        
     return (
         <div className='flex p-32'>
@@ -34,7 +56,7 @@ const JobDetails = () => {
                     <p>Phone : {jobdetails.phone}</p>
                     <p>Email : {jobdetails.email}</p>
                     <p className='mb-7'>Address: {jobdetails.location}</p>
-                        <Link to={"/applyjob"} id='header-button' className='p-3 ml-7'>Apply Now</Link>
+                        <button id='header-button' className='p-3 ml-7' onClick={()=>handleAddToCart(jobdetails)}>Apply Now</button>
                     
               </div>
         </div>

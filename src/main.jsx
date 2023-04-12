@@ -14,6 +14,7 @@ import JobDetails from './Component/JobDetails/JobDetails';
 import HomeRouter from './Component/HomeRoute/HomeRoute';
 import Chart from './Component/Chart/Chart';
 import ErrorPage from './Component/ErrorPage/ErrorPage';
+import cartProductsLoader from './loaders/cartProductsLoader';
 
 
 
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       {
         path:"appliedjobs",
         element:<AppliedJobs></AppliedJobs>,
+        loader: cartProductsLoader
         
       }
     ], 
