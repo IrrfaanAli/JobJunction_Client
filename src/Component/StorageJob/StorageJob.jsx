@@ -18,8 +18,8 @@ const StorageJob = ({job}) => {
             <p className='mb-3 text-2xl'>{title}</p> 
              <p className='mb-3 text-xl'>{company}</p>
              <div className='flex mb-3'>
-                <div> <p className='mr-5 border-solid border-2 border-indigo-300 p-1 mr-2'>{job_type[0]}</p></div>
-                <div><p className='mr-5 border-solid border-2 border-indigo-300 p-1 mr-2'>{job_type[1]}</p></div>
+                <div> <p className='mr-5 border-solid border-2 border-indigo-300 p-1 '>{job_type[0]}</p></div>
+                <div><p className='mr-5 border-solid border-2 border-indigo-300 p-1 '>{job_type[1]}</p></div>
              </div>
              <div className='flex'>
                 <div className='mr-5'>Location : {location}</div>
