@@ -26,8 +26,8 @@ const AppliedJobs = () => {
 
     return (
         <div>
-            <button onClick={() => handleChange('On Site')} className='bg-gray-300 mt-5 p-2' >On-Site</button>
-            <button onClick={() => handleChange('Remote')} className='bg-gray-300 mt-5 ml-2 p-2'>Remote</button>
+            <button onClick={() => handleChange('On Site')} className='bg-teal-400 mt-5 p-2' >On-Site</button>
+            <button onClick={() => handleChange('Remote')} className='bg-cyan-400 mt-5 ml-2 p-2'>Remote</button>
             {
 
                 selectedItem === "On Site" || "Remote" && isSelected === true ? filterItem.map(job => <StorageJob
