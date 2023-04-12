@@ -11,26 +11,11 @@ const JobList = () => {
 
         fetch('jobs.json')
             .then(res => res.json())
-            .then(data => {
-                const data1 = data.slice(0, 2)
-                setjobList(data1)
-            });
-
-
+            .then(data => 
+ 
+                setjobList(data));
     }, []);
 
-     const allJobs = () =>{
-        
-
-        useEffect(() => {
-
-            fetch('jobs.json')
-                .then(res => res.json())
-                .then(data => setjobList(data)
-                );
-        }, []); 
-         
-     }
      
     return (
         <div >
@@ -39,7 +24,12 @@ const JobList = () => {
 
             <div className='grid grid-cols-1  ml-7 lg:grid-cols-2 gap-7 lg:ml-96' id='page'>
                 {
-                    jobList.map(job => <SingleJob
+                   full === true ?  jobList.map(job => <SingleJob
+
+                        key={job.id}
+                        job={job}
+
+                    ></SingleJob>) :  jobList.slice(0,2).map(job => <SingleJob
 
                         key={job.id}
                         job={job}
@@ -48,7 +38,7 @@ const JobList = () => {
                 }
             </div>
 
-            <button id='header-button' className='seebutton p-3' onClick={allJobs()}>See all jobs</button>
+            <button id='header-button' className='seebutton p-3' onClick={()=>setfull(!full)}>See all jobs</button>
         </div>
     );
 };
