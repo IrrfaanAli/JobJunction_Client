@@ -13,7 +13,7 @@ const Header = () => {
        <Link to={`/appliedjobs`}> <li className='m-3 lg:m-5 lg:text-2xl font-semibold'>Applied Jobs</li></Link>
       <Link to={`/blog`}><li className=' m-3 lg:m-5 lg:text-2xl font-semibold'>Blog</li></Link> 
         </ul>
-        <button id='header-button'  className=' ml-5 lg:text-xl font-semibold mb-3'>Hire Me</button>
+        <button id='header-button'  className=' ml-5 lg:text-xl font-semibold mb-3'>Start Applying</button>
       </nav>
       
        

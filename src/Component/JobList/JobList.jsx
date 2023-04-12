@@ -13,7 +13,7 @@ const JobList = () => {
             .then(res => res.json())
             .then(data => 
  
-                setjobList(data));
+         setjobList(data));
     }, []);
 
      

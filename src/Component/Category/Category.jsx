@@ -7,7 +7,7 @@ const Category = () => {
 
       useEffect(()=>{
          
-          fetch('job_category.json').then( res  => res.json()).then(data => setJobs(data));
+          fetch('/job_category.json').then( res  => res.json()).then(data => setJobs(data));
 
       },[])
 
