@@ -38,7 +38,7 @@ const JobList = () => {
                 }
             </div>
 
-            <button id='header-button' className='seebutton p-3' onClick={()=>setfull(!full)}>See all jobs</button>
+            <button id='header-button' className='seebutton ' onClick={()=>setfull(!full)}>See all jobs</button>
         </div>
     );
 };

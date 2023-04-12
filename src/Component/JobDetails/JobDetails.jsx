@@ -56,7 +56,7 @@ const JobDetails = () => {
                     <p>Phone : {jobdetails.phone}</p>
                     <p>Email : {jobdetails.email}</p>
                     <p className='mb-7'>Address: {jobdetails.location}</p>
-                        <button id='header-button' className='p-3 ml-7' onClick={()=>handleAddToCart(jobdetails)}>Apply Now</button>
+                        <button id='header-button' className=' ml-7' onClick={()=>handleAddToCart(jobdetails)}>Apply Now</button>
                     
               </div>
         </div>

@@ -9,6 +9,7 @@ const AppliedJobs = () => {
      console.log(cart.length)
     return (
         <div>
+             <p className='ml-96'>helel</p>
             {
                 cart.map(job => <StorageJob
                  key={job.id}
