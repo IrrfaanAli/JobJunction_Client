@@ -9,7 +9,7 @@ const JobList = () => {
 
     useEffect(() => {
 
-        fetch('jobs.json')
+        fetch('/jobs.json')
             .then(res => res.json())
             .then(data => 
  
