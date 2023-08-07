@@ -10,7 +10,7 @@ const Header = () => {
          <ul className=' flex lg:flex items-center'>
          <Link to={`/`}> <li className='m-3 lg:m-5 lg:text-2xl font-semibold'>Home</li></Link>
          <Link to={`/`}> <li className='m-3 lg:m-5 lg:text-2xl font-semibold'>Job</li></Link>
-         <Link to={`/statistics`}> <li className=' m-3 lg:m-5 lg:text-2xl font-semibold'>Statastics</li></Link>
+         {/* <Link to={`/statistics`}> <li className=' m-3 lg:m-5 lg:text-2xl font-semibold'>Statastics</li></Link> */}
        <Link to={`/appliedjobs`}> <li className='m-3 lg:m-5 lg:text-2xl font-semibold'>Applied Jobs</li></Link>
        <Link to={`/`}> <li className='m-3 lg:m-5 lg:text-2xl font-semibold'>Contact</li></Link>
       <Link to={`/blog`}><li className=' m-3 lg:m-5 lg:text-2xl font-semibold'>Blog</li></Link> 

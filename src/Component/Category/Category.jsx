@@ -13,10 +13,10 @@ const Category = () => {
 
     return (
         <div>
-             <p className='text-center text-4xl font-bold mt-7 mb-5'>Job Category List</p>
-             <p className='text-center mb-5  '>Explore thousands of job opportunities with all the information you need. Its your future</p>
+             <p className='text-center text-4xl font-bold mt-7 mb-5'>Popular Categories</p>
+             <p className='text-center mb-5 text-slate-400 '>Search all the open positions on the web. Get your own personalized salary <br></br>estimate. Read reviews on over 30000+ companies worldwide.</p>
              
-             <div className='flex flex-col mx-5 gap-4 lg:flex-row lg:gap-12  lg:ml-72 mb-14'>
+             <div className='flex flex-col mx-5 gap-4 lg:flex-row lg:gap-12  lg:ml-62 mb-14'>
                  {
                     jobs.map(job=> <SingleCategory
                      key = {job.id}

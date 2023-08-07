@@ -2,7 +2,7 @@
     {
         "id": "1",
         "logo": "./accounts 1.png",
-        "title": "Account & Finance",
+        "title": "Business Development",
         "jobs": "300"
         
     },
@@ -21,7 +21,13 @@
     {
         "id": "4",
         "logo": "./social-media 1.png",
-        "title": "Engineering Job",
+        "title": "Software Engineering",
+        "jobs": "345"
+    },
+    {
+        "id": "5",
+        "logo": "./social-media 1.png",
+        "title": "Customer Service",
         "jobs": "345"
     }
 ]
