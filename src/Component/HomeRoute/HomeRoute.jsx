@@ -5,6 +5,8 @@ import { Outlet } from 'react-router-dom';
 import Category from '../Category/Category';
 import JobDetails from '../JobDetails/JobDetails';
 import JobList from '../JobList/JobList';
+import TopRecruiters from '../TopRecruiters/TopRecruiters';
+import Footer from '../Footer/Footer';
 
 const BlogsPageRoute = () => {
     return (
@@ -12,6 +14,8 @@ const BlogsPageRoute = () => {
              <Hero></Hero>
              <Category></Category>
              <JobList></JobList>
+             <TopRecruiters></TopRecruiters>
+             <Footer></Footer>
         </div>
     );
 };
