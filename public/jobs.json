@@ -89,6 +89,51 @@
         "email": "jobs@abcwebdesign.com",
         "experiences": "2-3",
         "logo": "./google-1-1 1.png"
+    },
+    {
+        "id": "7",
+        "title": "Software Engineer",
+        "description": "We are seeking a talented front-end developer to help us build beautiful and responsive web applications. The ideal candidate will have experience with modern web development tools and frameworks.",
+        "salary": "$70,000 - $90,000",
+        "location": "New York, NY",
+        "company": "Google",
+        "job_type":["Full-time","Remote"] ,
+        "education_requirement": "Bachelor's degree in Computer Science or related field",
+        "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
+        "phone": "555-5678",
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3",
+        "logo": "./google-1-1 1.png"
+    },
+    {
+        "id": "8",
+        "title": "Software Engineer",
+        "description": "We are seeking a talented front-end developer to help us build beautiful and responsive web applications. The ideal candidate will have experience with modern web development tools and frameworks.",
+        "salary": "$70,000 - $90,000",
+        "location": "New York, NY",
+        "company": "Google",
+        "job_type":["Full-time","Remote"] ,
+        "education_requirement": "Bachelor's degree in Computer Science or related field",
+        "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
+        "phone": "555-5678",
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3",
+        "logo": "./google-1-1 1.png"
+    },
+    {
+        "id": "9",
+        "title": "Engineering",
+        "description": "We are seeking a talented front-end developer to help us build beautiful and responsive web applications. The ideal candidate will have experience with modern web development tools and frameworks.",
+        "salary": "$70,000 - $90,000",
+        "location": "New York, NY",
+        "company": "Google",
+        "job_type":["Full-time","Remote"] ,
+        "education_requirement": "Bachelor's degree in Computer Science or related field",
+        "job_responsibility": "Build beautiful and responsive web applications using modern web development tools and frameworks",
+        "phone": "555-5678",
+        "email": "jobs@abcwebdesign.com",
+        "experiences": "2-3",
+        "logo": "./google-1-1 1.png"
     }
     
 ]

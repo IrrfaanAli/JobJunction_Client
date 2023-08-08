@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "logo": "./accounts 1.png",
+        "title": "24/7 Support",
+        "jobs": "Many desktop publishing now use and a search for job."
+        
+    },
+    {
+        "id": "2",
+        "logo": "./business 1.png",
+        "title": "Tech & Startup Jobs",
+        "jobs": "Many desktop publishing now use and a search for job."
+    },
+    {
+        "id": "3",
+        "logo": "./chip 1.png",
+        "title": "Quick & Easy",
+        "jobs": "Many desktop publishing now use and a search for job."
+    },
+    {
+        "id": "4",
+        "logo": "./social-media 1.png",
+        "title": "Save Time",
+        "jobs": "Many desktop publishing now use and a search for job"
+    }
+    
+]

@@ -8,6 +8,7 @@ export default {
     extend: {
       colors:{
         hero: 'rgb(242, 250, 247)',
+        hero2: 'rgb(248, 250, 252)',
       }
     },
   },

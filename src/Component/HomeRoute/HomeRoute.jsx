@@ -7,6 +7,7 @@ import JobDetails from '../JobDetails/JobDetails';
 import JobList from '../JobList/JobList';
 import TopRecruiters from '../TopRecruiters/TopRecruiters';
 import Footer from '../Footer/Footer';
+import WhyLove from '../WhyLove/WhyLove';
 
 const BlogsPageRoute = () => {
     return (
@@ -14,6 +15,7 @@ const BlogsPageRoute = () => {
              <Hero></Hero>
              <Category></Category>
              <JobList></JobList>
+             <WhyLove></WhyLove>
              <TopRecruiters></TopRecruiters>
              <Footer></Footer>
         </div>
