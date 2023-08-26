@@ -16,6 +16,8 @@ const JobList = () => {
  
          setjobList(data));
     }, []);
+    
+
 
      
     return (

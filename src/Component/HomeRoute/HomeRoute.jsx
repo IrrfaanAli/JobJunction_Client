@@ -17,7 +17,7 @@ const BlogsPageRoute = () => {
              <JobList></JobList>
              <WhyLove></WhyLove>
              <TopRecruiters></TopRecruiters>
-             <Footer></Footer>
+             {/* <Footer></Footer> */}
         </div>
     );
 };
