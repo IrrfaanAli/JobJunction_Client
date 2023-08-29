@@ -7,5 +7,4 @@
 * Homepage Mobile responsive 
 * Job Type filter
 
-## Live Link
-https://chic-cendol-8a15b9.netlify.app/
+
