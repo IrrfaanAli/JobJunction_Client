@@ -83,14 +83,14 @@ const Signup = () => {
                                             <label className="label">
                                                 <span className="label-text">Password</span>
                                             </label>
-                                            <input type="password" id="password"  {...register("password", {
-                                                required: true,
-                                                minLength: 6,
+                                            <input type="password" id="password"  {...register("password", {     
+                                               required: true, minLength: 6,
                                                 pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/
                                             })} placeholder="password" className="input input-bordered" />
                                             {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
                                             {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
-                                            {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase and one special character.</p>}
+                                            {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase 
+                                              and one special character.</p>}
 
                                         </div>
                                         <div className="form-control">
@@ -108,10 +108,10 @@ const Signup = () => {
 
                                         </div>
                                         <div className="form-control">
-                                            <label className="label">
+                                            {/* <label className="label">
                                                 <span className="label-text">Photo URL</span>
                                             </label>
-                                            <input type="text" {...register("photoURL", { required: true })} placeholder="PhotoURL" name="photoURL" className="input input-bordered" />
+                                            <input type="text" {...register("photoURL", { required: true })} placeholder="PhotoURL" name="photoURL" className="input input-bordered" /> */}
                                             <label className="label">
                                                 <p>Do not have Account? <Link to={'/login'}><span className="text-green-400">Login</span></Link></p>
 

@@ -4,19 +4,48 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProviders';
 import axios from 'axios';
+import { initializeApp } from "firebase/app"
+// import firebase from 'firebase/app';
+//  import firebase from 'firebase/app';
+// // import PhoneAuth  from '../Component/PhoneAuth';
+// // import { onAuthStateChanged } from 'firebase/auth';
+//  import 'firebase/auth';
+import   firebase from 'firebase/compat/app';
+//  import app from '../firebase/firebase.config';
+// import 'firebase/compat/auth';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import PhoneAuth from '../Component/PhoneAuth';
+import { onAuthStateChanged } from 'firebase/auth';
 
-const Login = () => {
+
+const Login = () => { 
+    const firebaseConfig = {
+        apiKey: "AIzaSyAu5gWzlKVkOKSVU9u8f5YQdvABkg8hVQE",
+        authDomain: "workzen-9a8db.firebaseapp.com",
+        projectId: "workzen-9a8db",
+        storageBucket: "workzen-9a8db.appspot.com",
+        messagingSenderId: "1010309156968",
+        appId: "1:1010309156968:web:5dfc9fe68e67bbf9a9abdd"
+      };
+ firebase.initializeApp(firebaseConfig)  
+                          
   const captchaRef = useRef(null);
+  const [puser,setPuser] =useState(null);
   const [disabled , setDisabled] =useState(true);
     useEffect(() =>{
         loadCaptchaEnginge(6);
+       
     }, [])
+
+   
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const { googleSignIn } = useContext(AuthContext);
+
+
+   
 
     const handleValidateCaptcha =() =>{
         const user_captcha_value = captchaRef.current.value;
@@ -45,6 +74,15 @@ const Login = () => {
 
     const from = location.state?.form?.pathname || '/';
     const navigate = useNavigate();
+    const handlePhoneSignIn = () =>{
+        useEffect (()=>{
+            const unRegisterd = onAuthStateChanged(firebase.auth(),(currentUser)=>{
+                console.log(currentUser)
+                setPuser(currentUser);
+            })
+        },[])
+    }
+    
     const handleLogIn = async (data) => {
 
         userlogin(data.email, data.password)
@@ -62,38 +100,14 @@ const Login = () => {
                         
                         navigate(from, { replace: true });
                     })
-                // navigate(from, { replace: true });
+                
             })
             .catch(error => {
                 setErr(error.message);
             })
      
-        // try {
-        //     const response = await axios.post('/login', {email,password });
-        //      console.log(email,password)
-        //     setMessage(response.data.message);
-        //   } catch (error) {
-        //     setMessage('Error during login');
-        //   }
-
-        // const newUser ={email:data.email, password:data.password}
-
-        // fetch('http://localhost:5000/login', {
-        //            method: 'POST',
-        //            headers: {
-        //                'content-type': 'application/json'
-        //            },
-        //            body: JSON.stringify(newUser)
-        //        })
-        //            .then(res => res.json())
-        //            .then(() => {
-                       
-        //                navigate(from, { replace: true });
-        //            })
-
-     console.log(data)
-     
     }
+   
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
@@ -119,8 +133,10 @@ const Login = () => {
         }
     return (
         <div>
-             <div className="p-7">
+             <div className="p-3">
                     <p>{message}</p>
+   
+                    
                     <form onSubmit={handleSubmit(handleLogIn)} >
                         <div className="card flex-shrink-0 w-full h-1/2  max-w-sm shadow-2xl bg-base-100 p-7  mx-auto">
                             <div className="card-body">
@@ -164,8 +180,11 @@ const Login = () => {
                                 </div>
                                 <div className="divider">OR</div>
                                 <button  onClick={handleGoogleSignIn}  type='submit' className="btn bg-orange-700 border-none text-white">google</button>
+                                <div className="divider">OR</div>
+                                <PhoneAuth auth={firebase.auth()}></PhoneAuth>
                             </div>
                         </div>
+ 
                     </form>
                 </div>
         </div>

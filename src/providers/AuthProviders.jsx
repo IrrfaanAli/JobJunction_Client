@@ -41,20 +41,20 @@ const AuthProviders = ({ children }) => {
     }
 
     useEffect(()=>{
-   const unsubscribe = onAuthStateChanged(auth, loggedUser =>{
+       const unsubscribe = onAuthStateChanged(auth, loggedUser =>{
         setUser(loggedUser);
 
-        //  if(loggedUser){
-        //      axios.post('https://assignment12-kappa.vercel.app/jwt', {email: loggedUser.email})
-        //      .then(data =>{
+         if(loggedUser){
+             axios.post('https://localhost:5000/jwt', {email: loggedUser.email})
+             .then(data =>{
                
-        //          localStorage.setItem('access-token', data.data.token)
-        //          setLoading(false);
-        //     })
-        // }
-        //  else{
-        //      localStorage.removeItem('access-token')
-        //  }
+                 localStorage.setItem('access-token', data.data.token)
+                 setLoading(false);
+            })
+        }
+         else{
+             localStorage.removeItem('access-token')
+         }
 
         return ()=>{
             unsubscribe();

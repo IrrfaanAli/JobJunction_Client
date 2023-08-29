@@ -7,7 +7,9 @@ import HomeRouter from "../Component/HomeRoute/HomeRoute";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Component/Dashboard/Dashboard"
-import AdminRoute from "./AdminRoute";
+ import AdminRoute from "../Routes/AdminRoute";
+ import HostRoute from "../Routes/HostRoute";
+import UserRoute from "../Routes/UserRoute";
 import JobPage from "../Component/JobPage/JobPage";
 import AppliedJobs from "../Component/UserDashboard/AppliedJobs";
 import SelectedJobs from "../Component/UserDashboard/SelectedJobs";
@@ -15,6 +17,7 @@ import AdminManageUser from "../Component/AdminDashboard/AdminManageUser";
 import AdminHome from "../Component/AdminDashboard/AdminHome";
 import HostAddJob from "../Component/HostDashboard/HostAddJob";
 import HostJobs from "../Component/HostDashboard/HostJobs";
+
 
 export const router = createBrowserRouter([
     {
@@ -50,49 +53,38 @@ export const router = createBrowserRouter([
           path:"job",
           element:<JobPage></JobPage>,
           
-        },
-        // {
-        //   path:"appliedjobs",
-        //   element:<AppliedJobs></AppliedJobs>,
-        //   loader: cartProductsLoader
-          
-        // }
+        }
+        
       ], 
     },
     {
         path : 'dashboard',
         element : <Dashboard></Dashboard>,
-        children : [
-            // {
-            //     path : 'adminhome',
-            //     element :<AdminRoute><AdminHome></AdminHome></AdminRoute> 
-            // }
+        children : [          
             {
                 path : 'appliedjobs',
-                element :<AppliedJobs></AppliedJobs>
+                element : <UserRoute><AppliedJobs></AppliedJobs></UserRoute> 
             },
             {
               path : 'selectedjobs',
-              element :<SelectedJobs></SelectedJobs>
+              element :<UserRoute><SelectedJobs></SelectedJobs></UserRoute>
           },
           {
              path : 'adminhome',
-             element : <AdminHome></AdminHome>
+             element : <AdminHome><AdminHome></AdminHome></AdminHome> 
           },
           {
             path : 'adminmanageuser',
-            element : <AdminManageUser></AdminManageUser>
+            element :<AdminRoute><AdminManageUser></AdminManageUser></AdminRoute>
           },
           {
             path : 'hostaddjob',
-            element : <HostAddJob></HostAddJob>
+            element :<HostRoute><HostAddJob></HostAddJob></HostRoute>
           },
           {
             path : 'hostjobs',
-            element : <HostJobs></HostJobs>
+            element :<HostRoute><HostJobs></HostJobs></HostRoute>
           }
         ]
-    }
-    
-    
+    }   
   ]);
